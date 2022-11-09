@@ -1,0 +1,18 @@
+<nav>
+    <% if(currentUser) { %>
+    <div class="logged-nav">
+        <a href="/">Home</a>
+        <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Log Out" />
+        </form>
+    </div>
+    <% } else { %>
+    <div class="logged-nav">
+        <a href="/">Home</a>
+        <div>
+            <a href="/users/new">Register</a>
+            <a href="/sessions/new">Login</a>
+        </div>
+    </div>
+    <% } %>
+  </nav>
